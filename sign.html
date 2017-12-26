@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="style/my.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sign in</title>
+</head>
+
+<body class="blue">
+    <!-- Navigation Panel -->
+    <nav class="blue">
+        <a href="" class="brand-logo center">CV-Maker</a>
+    </nav>
+
+    <!-- Carousel -->
+    <div class="carousel carousel-slider">
+        <!-- Item1 -->
+        <div class="carousel-item" style="background-image: url('imgs/back1.jpg');background-size:100% 100%;background-repeat: no-repeat;">
+            <h1 class="white-text center">
+                <br>
+                <br>Don't be like others</h1>
+        </div>
+
+        <!-- Item2 -->
+        <div class="carousel-item" style="background-image: url('imgs/back2.jpg');background-size:100% 100%;background-repeat: no-repeat;">
+            <h1 class="white-text center">
+                <br>
+                <br>Make as many as you want</h1>
+        </div>
+
+        <!-- Item3 -->
+        <div class="carousel-item" style="background-image: url('imgs/back3.jpg');background-size:100% 100%;background-repeat: no-repeat;">
+            <h1 class="white-text center">
+                <br>
+                <br>Nothing Complicated</h1>
+        </div>
+
+    </div>
+    <!-- Carsousel end -->
+
+
+    <!-- footer -->
+    <div class="center">
+        <!-- bottom paragraph -->
+        <p class="flow-text white-text">
+            Build and share resposive curriculum vitae "CV", its Free and easy to use, and you can make limitless number of CVs!
+        </p>
+
+        <!-- Signing options -->
+
+        <a href="#signin" href="#signin" class="modal-trigger hoverable btn btn-large waves-light waves-effect left  pink lighten-1"
+            style="margin-left: 15%">Sign in</a>
+        <a href="#signup" href="#signup" class="modal-trigger hoverable btn btn-large waves-light waves-effect right pink lighten-1"
+            style="margin-right: 15%">Sign up</a>
+
+    </div>
+
+
+
+
+    <!-- Modals Structures -->
+
+    <!-- Signin Modal Structure -->
+    <div id="signin" class=" modal modal-fixed-footer">
+        <div class="modal-content">
+            <!-- Modal content -->
+            <p class="flow-text center">Sign in to your CV-Maker Account</p>
+
+            <!-- Email Input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">email</i>
+                    <input id="in_email" type="email" class="validate">
+                    <label class="active" for="in_email">Email</label>
+                </div>
+            </div>
+
+            <!-- Password Input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">locked</i>
+                    <input id="in_password" type="password" class="validate">
+                    <label class="active" for="in_password">Password</label>
+                </div>
+            </div>
+            <a href="#" onclick="forgetPassword()" class="flow-text underlined">Forget your password?</a>
+
+        </div>
+
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+            <a href="#!" class="modal-action waves-effect waves-grey btn-flat" id="btn_in" onclick="signIn()">Sign in</a>
+        </div>
+    </div>
+    <!-- End of sign in model -->
+
+
+    <!-- Signup Modal Structure -->
+    <div id="signup" class=" modal modal-fixed-footer">
+        <div class="modal-content">
+            <!-- Modal content -->
+            <p class="flow-text center">Sign up to join us!</p>
+
+            <!-- Name Input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">create</i>
+                    <input id="up_name" type="text" class="validate">
+                    <label class="active" for="up_name">Your Name</label>
+                </div>
+            </div>
+
+            <!-- Date input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">date_range</i>
+                    <input placeholder="Date of birth" type="date" id="up_date">
+                </div>
+            </div>
+
+            <!-- Email Input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">email</i>
+                    <input id="up_email" type="email" class="validate">
+                    <label class="active" for="up_email">Email</label>
+                </div>
+            </div>
+
+            <!-- Password Input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">locked</i>
+                    <input id="up_password" type="password" class="validate">
+                    <label class="active" for="up_password">Password</label>
+                </div>
+            </div>
+
+            <!-- Password Input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">locked</i>
+                    <input id="up_password2" type="password" class="validate">
+                    <label class="active" for="up_password2">Re-Write Password</label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+            <a href="#!" class="modal-action waves-effect waves-grey btn-flat" id="btn_up" onclick="signUp()">Sign up</a>
+        </div>
+    </div>
+
+    <!-- Message modal -->
+    <div id="message" class=" modal">
+        <div class="modal-content">
+            <h3 class="center">Message</h3>
+            <!-- Modal content -->
+            <h6 id="message_body" class="flow-text center">your message here</h6>
+
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Dismiss</a>
+        </div>
+    </div>
+    <!-- End of models -->
+
+
+
+
+
+
+
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCuw1Rp-S4nVlmxspsx8C56ZzFCywjMYuM",
+            authDomain: "cv-maker-2017.firebaseapp.com",
+            databaseURL: "https://cv-maker-2017.firebaseio.com",
+            projectId: "cv-maker-2017",
+            storageBucket: "cv-maker-2017.appspot.com",
+            messagingSenderId: "396157923179"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!-- Materialize -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+        $('.carousel.carousel-slider').carousel({ fullWidth: true });
+
+        $(document).ready(function () {
+            $('.modal').modal();
+        });
+
+    </script>
+    <!-- Customized by me -->
+    <script src="js/sign.js"></script>
+
+</body>
+
+</html>

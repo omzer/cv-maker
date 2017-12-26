@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+</head>
+
+<body>
+
+    <!-- Nav bar -->
+    <nav class=" blue lighten-1">
+        <a href="#" class="brand-logo center">CV-Maker</a>
+        <ul class="nav-wrapper right">
+            <!-- Home -->
+            <li>
+                <a href="index.html" class="tooltipped" data-position="bottom" data-tooltip="Home page">
+                    <i class="material-icons">home</i>
+                </a>
+            </li>
+            <!-- Profile -->
+            <li>
+                <a class="lighten-2 green tooltipped" data-position="bottom" data-tooltip="Profile">
+                    <i class="material-icons">account_circle</i>
+                </a>
+            </li>
+            <!-- Log out -->
+            <li>
+                <a onclick="signOut()" class="tooltipped" data-position="bottom" data-tooltip="Log out">
+                    <i class="material-icons">exit_to_app</i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- End of nav -->
+
+
+    <!-- Profile picture -->
+
+    <div style="width: 100%; background-size:100% 100% ;background-image:url('imgs/profile_back.jpg')">
+        <br>
+        <div class="center">
+            <!-- Profile picture -->
+            <img onclick="Materialize.toast('This feature is coming soon',2500);" data-position="left" data-tooltip="Upload new Image"
+                src="imgs/man.png" class="hoverable tooltipped z-depth-2 responsive-img circle" style="width:150px">
+            <br>
+        </div>
+        <br>
+
+        <!-- User Data -->
+        <ul class="collection container col s4">
+            <!-- Name -->
+            <li class="collection-item">
+                <i class="material-icons blue-text">account_circle</i>
+                <a class="flow-text" id="name">Loading...</a>
+            </li>
+            <!-- Birth date -->
+            <li class="collection-item">
+                <i class="material-icons blue-text">date_range</i>
+                <a class="flow-text" id="date">Loading...</a>
+            </li>
+            <!-- Email -->
+            <li class="collection-item">
+                <i class="material-icons blue-text">email</i>
+                <a class="flow-text" id="email">Loading...</a>
+            </li>
+        </ul>
+        <br>
+        <!-- End of center container -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Fab -->
+
+    <div class="fixed-action-btn">
+        <a class="hoverable btn-floating pulse orange btn-large waves-effect waves-light tooltipped" data-position="left" data-tooltip="Create New CV">
+            <i class="large material-icons">mode_edit</i>
+        </a>
+    </div>
+
+
+
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCuw1Rp-S4nVlmxspsx8C56ZzFCywjMYuM",
+            authDomain: "cv-maker-2017.firebaseapp.com",
+            databaseURL: "https://cv-maker-2017.firebaseio.com",
+            projectId: "cv-maker-2017",
+            storageBucket: "cv-maker-2017.appspot.com",
+            messagingSenderId: "396157923179"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!-- Materialize -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <!-- Customized by me -->
+    <script src="js/profile.js"></script>
+</body>
+
+</html>

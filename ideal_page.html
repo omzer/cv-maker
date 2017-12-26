@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ideal Page</title>
+</head>
+
+<body>
+
+    <!-- Nav bar -->
+    <nav class=" blue lighten-1">
+        <a href="#" class="brand-logo">CV-Maker</a>
+        <ul class="nav-wrapper right">
+            <!-- Home -->
+            <li>
+                <a class="darken-5 blue tooltipped" data-position="bottom" data-tooltip="Home page">
+                    <i class="material-icons">home</i>
+                </a>
+            </li>
+            <!-- Profile -->
+            <li>
+                <a href="#" class="tooltipped" data-position="bottom" data-tooltip="Profile">
+                    <i class="material-icons">account_circle</i>
+                </a>
+            </li>
+            <!-- Log out -->
+            <li>
+                <a onclick="signOut()" class="tooltipped" data-position="bottom" data-tooltip="Log out">
+                    <i class="material-icons">exit_to_app</i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCuw1Rp-S4nVlmxspsx8C56ZzFCywjMYuM",
+            authDomain: "cv-maker-2017.firebaseapp.com",
+            databaseURL: "https://cv-maker-2017.firebaseio.com",
+            projectId: "cv-maker-2017",
+            storageBucket: "cv-maker-2017.appspot.com",
+            messagingSenderId: "396157923179"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!-- Materialize -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <!-- Customized by me -->
+    <!-- <script src="js/index.js"></script> -->
+</body>
+
+</html>
